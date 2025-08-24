@@ -52,33 +52,53 @@ document.addEventListener("DOMContentLoaded", () => {
         
         switch(target.id) {
             case "b0":
+                if (numX == parseInt(display.textContent))
+                    display.textContent = "";
                 display.textContent += "0"; 
                 break;
             case "b1":
+                if (numX == parseInt(display.textContent))
+                    display.textContent = "";
                 display.textContent += "1";
                 break;
             case "b2":
+                if (numX == parseInt(display.textContent))
+                    display.textContent = "";
                 display.textContent += "2";
                 break;
             case "b3":
+                if (numX == parseInt(display.textContent))
+                    display.textContent = "";
                 display.textContent += "3";
                 break;
             case "b4":
+                if (numX == parseInt(display.textContent))
+                    display.textContent = "";
                 display.textContent += "4";
                 break;
             case "b5":
+                if (numX == parseInt(display.textContent))
+                    display.textContent = "";
                 display.textContent += "5";
                 break;
             case "b6":
+                if (numX == parseInt(display.textContent))
+                    display.textContent = "";
                 display.textContent += "6";
                 break;
             case "b7":
+                if (numX == parseInt(display.textContent))
+                    display.textContent = "";
                 display.textContent += "7";
                 break;
             case "b8":
+                if (numX == parseInt(display.textContent))
+                    display.textContent = "";
                 display.textContent += "8";
                 break;
             case "b9":
+                if (numX == parseInt(display.textContent))
+                    display.textContent = "";
                 display.textContent += "9";
                 break;
             case "bAdd":
@@ -89,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
             case "bSub":
                 numX = parseInt(display.textContent);
                 display.textContent = "";
-                operator = "sub";
+                operator = "subtract";
                 break;
             case "bMul":
                 numX = parseInt(display.textContent);
@@ -105,9 +125,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 numY = parseInt(display.textContent);
                 let result = operate(numX, numY, operator);
                 display.textContent = result;
+                numX = result;
+                numY = null;
+                operator = "";
                 break;
             case "bClr":
                 display.textContent = "";
+                numX = null;
+                numY = null;
+                operator = "";
                 break;
         }
     });
