@@ -153,6 +153,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (numX != null && operator != "")
                 {
                     numY = parseInt(display.textContent);
+                    if (numY == 0)
+                    {
+                        display.textContent = "0";
+                        alert("Nice Try. Can't divide by zero")
+                        break;
+                    }
                     let result = operate(numX, numY, operator);
                     display.textContent = result;
                     numX = result;
@@ -167,6 +173,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 break;
             case "bEqu":
                 numY = parseInt(display.textContent);
+                if (numY == 0 && operator == "divide")
+                {
+                    display.textContent = "0";
+                    alert("Nice Try. Can't divide by zero")
+                    break;
+                }
                 let result = operate(numX, numY, operator);
                 display.textContent = result;
                 numX = result;
