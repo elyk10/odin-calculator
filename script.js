@@ -102,23 +102,67 @@ document.addEventListener("DOMContentLoaded", () => {
                 display.textContent += "9";
                 break;
             case "bAdd":
-                numX = parseInt(display.textContent);
-                display.textContent = "";
+                if (numX != null && operator != "")
+                {
+                    numY = parseInt(display.textContent);
+                    let result = operate(numX, numY, operator);
+                    display.textContent = result;
+                    numX = result;
+                    numY = null;
+                }
+                else 
+                {
+                    numX = parseInt(display.textContent);
+                    display.textContent = "";
+                }
                 operator = "add";
                 break;
             case "bSub":
-                numX = parseInt(display.textContent);
-                display.textContent = "";
+                if (numX != null && operator != "")
+                {
+                    numY = parseInt(display.textContent);
+                    let result = operate(numX, numY, operator);
+                    display.textContent = result;
+                    numX = result;
+                    numY = null;
+                }
+                else
+                {
+                    numX = parseInt(display.textContent);
+                    display.textContent = "";
+                }
                 operator = "subtract";
                 break;
             case "bMul":
-                numX = parseInt(display.textContent);
-                display.textContent = "";
+                if (numX != null && operator != "")
+                {
+                    numY = parseInt(display.textContent);
+                    let result = operate(numX, numY, operator);
+                    display.textContent = result;
+                    numX = result;
+                    numY = null;
+                }
+                else 
+                {
+                    numX = parseInt(display.textContent);
+                    display.textContent = "";
+                }
                 operator = "multiply";
                 break;
             case "bDiv":
-                numX = parseInt(display.textContent);
-                display.textContent = "";
+                if (numX != null && operator != "")
+                {
+                    numY = parseInt(display.textContent);
+                    let result = operate(numX, numY, operator);
+                    display.textContent = result;
+                    numX = result;
+                    numY = null;
+                }
+                else 
+                {
+                    numX = parseInt(display.textContent);
+                    display.textContent = "";
+                }
                 operator = "divide";
                 break;
             case "bEqu":
